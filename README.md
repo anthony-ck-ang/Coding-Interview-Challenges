@@ -7,7 +7,7 @@ Covers basic important concepts for coding interviews
 - TECHNIQUES/CONCEPTS (TBA)
 
 Task objectives: 
-Practice and familiarize coding interview concepts/questions. 
-Enjoy and have a little fun :)
+- Practice and familiarize coding interview concepts/questions. 
+- Enjoy and have a little fun :)
 
 
