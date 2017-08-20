@@ -9,3 +9,7 @@
 1503205227214	Rename type 'ArrayLeftRotation'
 1503205287302	Rename type 'Solution'
 1503205372049	Rename package 'com.anthonyang'
+1503233324115	Rename local variable 'a'
+1503233333219	Rename local variable 'n'
+1503233350856	Rename local variable 'k'
+1503233389209	Rename local variable 'rot'

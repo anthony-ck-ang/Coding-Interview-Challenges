@@ -50,7 +50,7 @@ public class ArrayLeftRotationOptimized {
 	         for(int i=0;i<noOfElements;i++)
 	        	 /*
 	        	  * leftRotation shift is "applied" on inputArray and 
-	        	  * it's respective value (where the pointer is at after each "shift")
+	        	  * it's respective value (where the pointer is at each "shift")
 	        	  *  is moved into the new tempArray sequentially
 	        	  * 
 	        	  */

@@ -44,19 +44,13 @@ public class ArrayLeftRotationOptimized {
 	}
 
 	public static class Solution2 {
-	    public static int[] arrayLeftRotation(int[] inputArray, int noOfElements, int leftRotation) {
+	    public static int[] arrayLeftRotation(int[] a, int n, int k) {
 	        
-	        int tempArray[] = new int[noOfElements];
-	         for(int i=0;i<noOfElements;i++)
-	        	 /*
-	        	  * leftRotation shift is "applied" on inputArray and 
-	        	  * it's respective value (where the pointer is at after each "shift")
-	        	  *  is moved into the new tempArray sequentially
-	        	  * 
-	        	  */
-	             tempArray[i] = inputArray[(i+leftRotation)%noOfElements];
+	        int rot[] = new int[n];
+	         for(int i=0;i<n;i++)
+	             rot[i] = a[(i+k)%n];
 	         
-	         return tempArray;
+	         return rot;
 	       
 	     }
 	     
@@ -75,7 +69,8 @@ public class ArrayLeftRotationOptimized {
 	             System.out.print(output[i] + " ");
 	         
 	         System.out.println();
-	         in.close();	       
+	         in.close();
+	       
 	     }
 	 }
 }
