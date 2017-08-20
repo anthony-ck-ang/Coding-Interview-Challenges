@@ -13,10 +13,7 @@ Example:
 a = 5
 b = 2
 
-Before shift: 
-[1 2 3 4 5]
-
-After shift:  
-[3 4 5 1 2]
+Before shift: [1 2 3 4 5]
+After shift:  [3 4 5 1 2]
 
 

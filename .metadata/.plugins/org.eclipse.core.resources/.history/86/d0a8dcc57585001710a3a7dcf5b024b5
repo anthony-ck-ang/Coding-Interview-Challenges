@@ -23,7 +23,7 @@ public class ArrayLeftRotation {
 		// Declare & initialize input array
 		int inputArray[] = new int[noOfArrayElements];
 
-		// setting input array values
+		// setting first array values
 		for (int a_i = 0; a_i < noOfArrayElements; a_i++) {
 			inputArray[a_i] = in.nextInt();
 		}
