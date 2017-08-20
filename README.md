@@ -8,6 +8,6 @@ Covers basic important concepts for coding interviews
 
 Task objectives: 
 - Practice and familiarize coding interview concepts/questions. 
-- Enjoy and have a little fun :)
+- Put on your thinking cap, enjoy and have a little fun :)
 
 
