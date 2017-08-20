@@ -1,0 +1,43 @@
+package com.anthonyang;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+	public static int[] arrayLeftRotation(int[] a, int n, int k) {
+		int array[] = array;
+		for (int i = 0; i < array.length; i++) {
+			int newLocation = (i + (n - k)) % n;
+			array[newLocation] = in.nextInt();
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		int noOfArrayElements = in.nextInt();
+		int leftNotation = in.nextInt();
+		
+		//Declare & initialize input array
+		int inputArray[] = new int[noOfArrayElements];
+		
+		//setting first array values
+		for (int a_i = 0; a_i < noOfArrayElements; a_i++) {
+			inputArray[a_i] = in.nextInt();
+		}
+		
+		//Declare & initialize output array
+		int[] output = new int[noOfArrayElements];
+		
+		output = arrayLeftRotation(inputArray, noOfArrayElements, leftNotation);
+		for (int i = 0; i < noOfArrayElements; i++)
+			System.out.print(output[i] + " ");
+
+		System.out.println();
+		scan.close();
+	}
+}

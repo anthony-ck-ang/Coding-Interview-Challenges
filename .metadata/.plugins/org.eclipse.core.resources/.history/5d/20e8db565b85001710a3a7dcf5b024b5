@@ -1,0 +1,32 @@
+package com.anthonyang;
+
+import java.util.Scanner;
+
+public class ArrayLeftRotation {
+	
+	public static class Solution {
+		
+		    public static void main(String[] args) {
+		    	System.out.println(6%5);
+		    	
+//		        Scanner scan = new Scanner(System.in);
+//		        
+//		        int noOfElements = scan.nextInt();
+//		        int leftNotation = scan.nextInt();
+//		        
+//		        //Initializing array
+//		        int[] array = new int[noOfElements];
+//		        
+//		        //Setting array values + shifting based on LeftNotation
+//		        //modulus "noOfElements" is used to set the element back to position 0
+//		        for(int i=0; i<noOfElements;i++) {
+//		            array[(i+noOfElements-leftNotation)%noOfElements] = scan.nextInt();
+//		        }
+//		        for(int i=0; i<noOfElements;i++) {
+//		            System.out.print(array[i] + " ");
+//		        }    
+//		        scan.close();
+		    } 		    
+	}
+
+}
