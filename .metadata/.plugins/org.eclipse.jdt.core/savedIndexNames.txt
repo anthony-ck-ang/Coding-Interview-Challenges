@@ -17,7 +17,6 @@ INDEX VERSION 1.130+/Users/anthonyang/Documents/coding_challenges/.metadata/.plu
 1667701654.index
 156905802.index
 3302703152.index
-4054750776.index
 179992142.index
 3781870007.index
 1271342938.index

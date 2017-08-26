@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/Data_Structures/src/com/anthonyany/validateBST/BinaryTree.java"/>
+<listEntry value="/Data_Structures/src/com/anthonyang/validateBST/BinaryTree.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.anthonyany.validateBST.BinaryTree"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.anthonyang.validateBST.BinaryTree"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Data_Structures"/>
 </launchConfiguration>
