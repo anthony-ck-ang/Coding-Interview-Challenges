@@ -1,0 +1,91 @@
+package com.anthonyany.validateBST;
+
+//Ascertain if it is a BST (Binary Search tree)
+
+/* Class (creates an object) contains left and right child of current
+node and value*/
+class Node
+{
+	int data;
+	Node left, right;
+
+	public Node(int item)
+	{
+		data = item;
+		left = right = null;
+	}
+}
+/*
+ * Time Complexity: O(n) -> traverse each element once -> nth element
+ * Auxiliary Space O(1) -> not storing and keeping track of previous node memory
+ */
+public class BinaryTree
+{
+	//Root of BST
+	Node root;
+
+	/* provides default min and max value */
+
+	/* returns true if given search tree is binary
+	search tree (efficient version) */
+	boolean isBST() {
+		return isBSTUtil(root, Integer.MIN_VALUE,
+							Integer.MAX_VALUE);
+	}
+
+	/* Returns true if the tree is a BST and its
+	values are > min and < max. */
+	boolean isBSTUtil(Node node, int min, int max)
+	{
+		/* an empty tree is a BST */
+		if (node == null)
+			return true;
+
+		/* false if this node violates the min/max constraints */
+		if (node.data < min || node.data > max)
+			return false;
+
+		/* otherwise check the subtrees recursively
+		tightening the min/max constraints */
+		// Allow only distinct values
+		System.out.println(node.data);
+		
+		//subsequently, the min and max value be overwrite by the node's (actual value +-1,
+		//depending if it's left or right node)
+		/*
+		 * left 
+		 * -> node.data-1 (max value allowed)
+		 * -> each subsequent left child node should be lesser than previous (current)
+		 * 
+		 * right
+		 * -> node.data+1 (min value allowed)
+		 * -> each subsequent right child node should be more than previous (current)
+		 * -> only distinct values
+		 * 
+		 */
+		return (isBSTUtil(node.left, min, node.data-1) && //does not allow duplicates
+				isBSTUtil(node.right, node.data+1, max)); //does not allow duplicates
+	}
+
+	/* Driver program to test above functions */
+	public static void main(String args[])
+	{
+		//Creating Nodes and setting their values.
+		BinaryTree tree = new BinaryTree();
+		tree.root = new Node(4);
+		tree.root.left = new Node(2);
+		tree.root.right = new Node(5);
+		tree.root.left.left = new Node(1);
+		tree.root.left.right = new Node(3);
+
+		if (tree.isBST())
+			System.out.println("IS BST");
+		else
+			System.out.println("Not a BST");
+	}
+}
+
+/*
+ * Adapted from 
+ * http://www.geeksforgeeks.org/a-program-to-check-if-a-binary-tree-is-bst-or-not/
+ */

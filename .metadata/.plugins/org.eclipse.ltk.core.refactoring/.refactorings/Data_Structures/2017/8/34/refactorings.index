@@ -13,3 +13,7 @@
 1503233333219	Rename local variable 'n'
 1503233350856	Rename local variable 'k'
 1503233389209	Rename local variable 'rot'
+1503325673969	Rename method 'insert'
+1503326400075	Delete element
+1503712738395	Delete element
+1503726728118	Rename package 'com.anthonyany.BST2'

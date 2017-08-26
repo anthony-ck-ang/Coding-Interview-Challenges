@@ -1,0 +1,117 @@
+package com.anthonyang.BST;
+
+public class Node {
+
+	/*
+	 * Binary Tree Structure
+	 * 
+	 * Rules 1. left node is always < all right nodes 2. left node is always <
+	 * root node
+	 * 
+	 * Inserts should always be assumed as *Balanced *Balanced -> No of left
+	 * nodes == No of right nodes
+	 * 
+	 * Insert -> O(log n) Find -> O(log n)
+	 * 
+	 * O(log n) Don't need to check every node to find the right one Simply
+	 * divide-and-conquer by looking based on if the value is > || < root value
+	 */
+
+	Node left, right;
+	int data;
+
+	public Node(int data) {
+		this.data = data;
+	}
+
+	public void insertValue(int value) {
+		if (value <= data) { // data == root data, point to left *<-
+			if (left == null) {
+				left = new Node(value); // create new Node obj -> call Node
+										// constructor -> set data
+			} else {
+				left.insertValue(value); // recursively call itself again
+			}
+		} else { // value >= data ->* point right
+			if (right == null) {
+				right = new Node(value);
+			} else {
+				right.insertValue(value);
+			}
+		}
+	}
+
+	public boolean containsValue(int value) {
+		if (value == data) {
+			return true;
+		} else if (value < data) { // point left *<-
+			if (left == null) { // null pointer exception check
+				return false;
+			} else {
+				return left.containsValue(value); // recursively call itself
+													// until value == data ->
+													// return true || can't
+													// find value and return
+													// default false value.
+			}
+		} else { // value > data, points right ->*
+			if (right == null) {
+				return false;
+			} else {
+				right.containsValue(value); // recursively call itself
+			}
+		}
+		return false;
+	}
+	
+	public void printInOrder(){
+		if(left != null){
+			left.printInOrder();
+		}
+		System.out.println(data);
+		if(right != null){
+			right.printInOrder();
+		}
+	}
+
+	public static void main(String[] args) {
+		
+		Node node = new Node(10);
+		/*
+		 * Node class object (root)
+		 * data = 10
+		 * Node left = null
+		 * Node right = null
+		 */
+		
+		node.insertValue(5);
+		/*
+		 * Node class object (root)
+		 * 	data = 10
+		 * 	Node left = (contains a new Node)
+		 * 		data = 5
+		 * 		Node left = null (until a new node object is created)
+		 * 	Node right = null
+		 */
+		
+		node.insertValue(15);
+		/*
+		 * Node class object (root)
+		 * 	data = 10
+		 * 	Node left = (contains a new Node)
+		 * 		data = 5
+		 * 		Node left = null (until a new node object is created)
+		 * 		Node right = null (until a new node object is created)
+		 * 	Node right = (contains a new Node)
+		 * 		data = 5
+		 * 		Node left = null (until a new node object is created)
+		 *  	Node right = null (until a new node object is created)
+		 */
+		
+		node.containsValue(15);
+		
+		//node.printInOrder();
+		
+	}
+	
+}
